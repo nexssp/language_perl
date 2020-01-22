@@ -6,9 +6,14 @@ languageConfig.url = "https://www.perl.org/";
 languageConfig.extensions = [".pl"];
 languageConfig.builders = {}; // Check cpp or python to fill in example
 languageConfig.compilers = {
+  perl53: {
+    install: "scoop install perl",
+    command: "perl",
+    args: "<file>",
+    help: ``
+  },
   perl6: {
     install: "choco install StrawberryPerl",
-    // Cpp does not have possibility to compile and run on the fly. We need to save it as a exe file first.
     command: "perl",
     args: "<file>",
     help: ``
@@ -16,7 +21,7 @@ languageConfig.compilers = {
 };
 languageConfig.errors = require("./nexss.perl.errors");
 languageConfig.languagePackageManagers = {
-  npm: {
+  cpan: {
     //FIXME:
     installation: "installed.",
     messageAfterInstallation: "",
