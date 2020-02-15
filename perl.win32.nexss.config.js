@@ -3,6 +3,9 @@ languageConfig.title = "Perl";
 languageConfig.description =
   "Perl 5 is a highly capable, feature-rich programming language with over 30 years of development.";
 languageConfig.url = "https://www.perl.org/";
+languageConfig.founders = ["Larry Wall"];
+languageConfig.developers = [""];
+languageConfig.years = ["1987"];
 languageConfig.extensions = [".pl"];
 languageConfig.builders = {}; // Check cpp or python to fill in example
 languageConfig.compilers = {
