@@ -1,7 +1,6 @@
+// More about error handling in Nexss Programmer can be found:
+// https://github.com/nexssp/cli/wiki/Errors-Solutions
 module.exports = {
-  win32: {
-    "ModuleNotFoundError: No module named '(.*?)'":
-      "nexss install py <module> OR pip3 install <module>",
-    "not found": `nexss install py <module> OR pip3 install <module>`
-  }
+  "Undefined subroutine &main::(?<function>.*?) called at myfile.pl line (?<line>.*?),":
+    "Function not found '<function>' at line <line>. You may need to look at: https://perldoc.perl.org/index-functions.html",
 };

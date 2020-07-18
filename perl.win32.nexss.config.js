@@ -9,18 +9,18 @@ languageConfig.years = ["1987"];
 languageConfig.extensions = [".pl"];
 languageConfig.builders = {}; // Check cpp or python to fill in example
 languageConfig.compilers = {
-  perl53: {
+  perl5: {
     install: "scoop install perl",
     command: "perl",
     args: "<file>",
-    help: ``
+    help: ``,
   },
   perl6: {
     install: "choco install StrawberryPerl",
     command: "perl",
     args: "<file>",
-    help: ``
-  }
+    help: ``,
+  },
 };
 languageConfig.errors = require("./nexss.perl.errors");
 languageConfig.languagePackageManagers = {
@@ -37,8 +37,8 @@ languageConfig.languagePackageManagers = {
     init: () => {},
     // if command not found in specification
     // run directly on package manager
-    else: "cpan <default> <args>"
-  }
+    else: "cpan <default> <args>",
+  },
 };
 
 module.exports = languageConfig;
