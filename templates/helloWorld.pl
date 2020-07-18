@@ -1,7 +1,7 @@
 #!/usr/bin/perl
-# Nexss PROGRAMMER 2.0.0 - Perl
-# Default template for JSON Data
+# Nexss PROGRAMMER 2.x - Perl
 # TODO: Sometimes json decodes keys in different order so test fails
+use strict;
 use JSON::PP;
 use Data::Dumper;
 # STDIN
