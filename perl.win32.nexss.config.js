@@ -15,12 +15,6 @@ languageConfig.compilers = {
     args: "<file>",
     help: ``,
   },
-  perl6: {
-    install: "choco install StrawberryPerl",
-    command: "perl",
-    args: "<file>",
-    help: ``,
-  },
 };
 languageConfig.errors = require("./nexss.perl.errors");
 languageConfig.languagePackageManagers = {
