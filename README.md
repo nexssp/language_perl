@@ -10,6 +10,12 @@ To Install Nexss Programmer please go to [Nexss Programmer CLI](https://github.c
 
 ## Some information from forums
 
+### Reddit
+
+#### Perl versioning
+
+[Reddit - Perl Versions](https://www.reddit.com/r/perl/comments/htf01q/question_about_perl_versions_57_bit_confused/)
+
 Versions history:
 
 https://perldoc.perl.org/index-history.html  
