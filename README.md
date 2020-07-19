@@ -2,6 +2,12 @@
 
 To Install Nexss Programmer please go to [Nexss Programmer CLI](https://github.com/nexssp/cli#readme) for more information.
 
+## Perl Weekly Challenge (Live Coding)
+
+### From reddit user manwar-reddit
+
+[Youtube Playlist Perl Weekly Challenge - Live Coding](https://www.youtube.com/watch?v=yPC-Iv6GdZk&list=PL8kcQda916cM-h-s-_pFywubrNDBVwjR1)
+
 ## Some information from forums
 
 Versions history:
