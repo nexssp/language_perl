@@ -1,4 +1,8 @@
-let languageConfig = Object.assign({}, require("../config.win32"));
+let languageConfig = Object.assign(
+  {},
+  require(`../config.${process.platform}`)
+);
+
 languageConfig.title = "Perl";
 languageConfig.description =
   "Perl 5 is a highly capable, feature-rich programming language with over 30 years of development.";
