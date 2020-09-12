@@ -2,7 +2,7 @@ let languageConfig = Object.assign({}, require("./perl.win32.nexss.config"));
 languageConfig.compilers = {
   perl5: {
     install:
-      "PERL_MM_USE_DEFAULT=1 apt install perl && apt install perl-CPAN && PERL_MM_USE_DEFAULT=1 cpan -i CPAN && cpan JSON",
+      "PERL_MM_USE_DEFAULT=1 apt install perl make && apt install perl-CPAN && PERL_MM_USE_DEFAULT=1 cpan && cpan JSON::PP",
     command: "perl",
     args: "<file>",
     help: ``,
