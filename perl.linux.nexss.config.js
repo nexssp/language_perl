@@ -1,8 +1,12 @@
 let languageConfig = Object.assign({}, require("./perl.win32.nexss.config"));
+let sudo = "sudo ";
+if (process.getuid && process.getuid() === 0) {
+  sudo = "";
+}
+
 languageConfig.compilers = {
   perl5: {
-    install:
-      "PERL_MM_USE_DEFAULT=1 apt install perl make && apt install perl-CPAN && PERL_MM_USE_DEFAULT=1 cpan && cpan JSON::PP",
+    install: `${sudo}PERL_MM_USE_DEFAULT=1 apt install perl make && apt install perl-CPAN && PERL_MM_USE_DEFAULT=1 cpan && cpan JSON::PP`,
     command: "perl",
     args: "<file>",
     help: ``,
@@ -19,9 +23,9 @@ languageConfig.dist = distName;
 
 // TODO: Later to cleanup this config file !!
 switch (distName) {
-  // case "Arch Linux":
-  //   languageConfig.compilers.perl5.install = `${sudo}pacman -Sy --noconfirm perl`;
-  //   break;
+  case "openSUSE Leap":
+  case "openSUSE Tumbleweed":
+    languageConfig.compilers.perl5.install = `${sudo}zypper -n perl make perl-App-cpanminus  && PERL_MM_USE_DEFAULT=1 cpan && cpan JSON::PP`;
   default:
     languageConfig.compilers.perl5.install = replaceCommandByDist(
       languageConfig.compilers.perl5.install
