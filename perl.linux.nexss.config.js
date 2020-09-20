@@ -23,6 +23,12 @@ languageConfig.dist = distName;
 
 // TODO: Later to cleanup this config file !!
 switch (distName) {
+  case "Alpine Linux": // 3.12
+    languageConfig.compilers.perl5.install = `${sudo}apk add ca-certificates wget
+apk add perl make perl-app-cpanminus
+PERL_MM_USE_DEFAULT=1 cpanm
+cpanm JSON::PP`;
+    break;
   case "openSUSE Leap":
   case "openSUSE Tumbleweed":
     languageConfig.compilers.perl5.install = `${sudo}zypper -n perl make perl-App-cpanminus  && PERL_MM_USE_DEFAULT=1 cpan && cpan JSON::PP`;
