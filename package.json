@@ -16,7 +16,5 @@
     "url": "https://github.com/nexssp/language_perl/issues"
   },
   "homepage": "https://github.com/nexssp/language_perl#readme",
-  "dependencies": {
-    "@nexssp/os": "^1.0.15"
-  }
+  "dependencies": {}
 }
