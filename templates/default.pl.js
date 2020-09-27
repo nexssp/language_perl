@@ -17,8 +17,9 @@ function getInstaller() {
         // case os.distros.FEDORA:
         //   return replaceCommandByDist("dnf install -y rapidjson-devel");
         default:
-          return replaceCommandByDist(`PERL_MM_USE_DEFAULT=1
+          return os.replacePMByDistro(`PERL_MM_USE_DEFAULT=1
 apt install perl-CPAN
+cpan YAML
 cpan JSON::PP`);
       }
 
