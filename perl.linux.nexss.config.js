@@ -4,8 +4,7 @@ const sudo = os.sudo();
 
 languageConfig.compilers = {
   perl5: {
-    install: `${sudo}PERL_MM_USE_DEFAULT=1 
-apt install perl make`,
+    install: `${sudo}PERL_MM_USE_DEFAULT=1 apt install perl make`,
     command: "perl",
     args: "<file>",
     help: ``,
