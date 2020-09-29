@@ -29,7 +29,7 @@ switch (distName) {
     languageConfig.compilers.perl5.install = `${sudo}apk add ca-certificates wget
 apk add perl make perl-app-cpanminus
 PERL_MM_USE_DEFAULT=1 cpanm
-cpanm JSON::PP`;
+cpanm JSON::PP`; // TODO: move json:pp to /templates/
     break;
   case "openSUSE Leap":
   case "openSUSE Tumbleweed":

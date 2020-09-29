@@ -18,9 +18,8 @@ function getInstaller() {
         //   return replaceCommandByDist("dnf install -y rapidjson-devel");
         default:
           return os.replacePMByDistro(`PERL_MM_USE_DEFAULT=1
-apt install perl-CPAN
-cpan YAML
-cpan JSON::PP`);
+(echo y;echo o conf prerequisites_policy follow;echo o conf commit)|cpan
+if !  perldoc -l JSON::PP; then apt install perl-CPAN; cpan Test JSON::PP; fi`);
       }
 
     case "darwin":
@@ -35,9 +34,7 @@ const config = {
   files: [],
   commands: [getInstaller()],
   repos: ["https://github.com/Tencent/rapidjson.git"],
-  descriptions: [
-    "Rapid json has been installed. License information here: https://github.com/Tencent/rapidjson.git",
-  ],
+  descriptions: ["JSON:PP has been installed."],
 };
 
 module.exports = config;
