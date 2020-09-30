@@ -1,7 +1,7 @@
 // additional operations for templates like copy extra libraries.
 
 function getInstaller() {
-  const os = require("@nexssp/os"); // this is included in main nexss programmer cli: @nexssp/cli
+  const os = require(`${process.env.NEXSS_SRC_PATH}/node_modules/@nexssp/os/`);
 
   switch (process.platform) {
     case "win32":
@@ -17,7 +17,8 @@ function getInstaller() {
         // case os.distros.FEDORA:
         //   return replaceCommandByDist("dnf install -y rapidjson-devel");
         default:
-          return os.replacePMByDistro(`export PERL_MM_USE_DEFAULT=1
+          return os.replacePMByDistro(`PERL_MM_USE_DEFAULT=1
+(echo y;echo o conf prerequisites_policy follow;echo o conf commit)|cpan
 if !  perldoc -l JSON::PP; then apt install perl-CPAN; cpan Test JSON::PP; fi`);
       }
 
@@ -33,7 +34,7 @@ const config = {
   files: [],
   commands: [getInstaller()],
   repos: ["https://github.com/Tencent/rapidjson.git"],
-  descriptions: ["JSON:PP has been installed."],
+  descriptions: ["completed."],
 };
 
 module.exports = config;

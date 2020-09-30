@@ -1,7 +1,7 @@
 // additional operations for templates like copy extra libraries.
 
 function getInstaller() {
-  const os = require("@nexssp/os"); // this is included in main nexss programmer cli: @nexssp/cli
+  const os = require(`${process.env.NEXSS_SRC_PATH}/node_modules/@nexssp/os/`);
 
   switch (process.platform) {
     case "win32":
@@ -34,7 +34,7 @@ const config = {
   files: [],
   commands: [getInstaller()],
   repos: ["https://github.com/Tencent/rapidjson.git"],
-  descriptions: ["JSON:PP has been installed."],
+  descriptions: ["completed."],
 };
 
 module.exports = config;
