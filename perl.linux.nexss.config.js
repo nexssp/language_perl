@@ -1,5 +1,7 @@
 let languageConfig = Object.assign({}, require("./perl.win32.nexss.config"));
-const os = require("@nexssp/os");
+// const os = require("@nexssp/os")
+// Load os from Nexss CLI path (it can be changed if needed)
+const os = require(`${process.env.NEXSS_SRC_PATH}/node_modules/@nexssp/os/`);
 const sudo = os.sudo();
 
 languageConfig.compilers = {
