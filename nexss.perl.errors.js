@@ -1,7 +1,5 @@
 // More about error handling in Nexss Programmer can be found:
 // https://github.com/nexssp/cli/wiki/Errors-Solutions
-// const os = require("@nexssp/os")
-// Load os from Nexss CLI path (it can be changed if needed)
 
 module.exports = {
   "Undefined subroutine &main::(?<function>.*?) called at myfile.pl line (?<line>.*?),":
