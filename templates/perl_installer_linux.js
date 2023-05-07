@@ -29,7 +29,7 @@ if !  perldoc -l JSON::PP; then ${sudo}apt install perl-CPAN; ${sudo}cpan Test J
       return "brew install rapidjson-dev";
     default:
       console.error(`${process.platform} is not implemented.`);
-      break;
+      return ""
   }
 }
 
